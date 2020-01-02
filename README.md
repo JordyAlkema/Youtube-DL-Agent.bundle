@@ -29,6 +29,17 @@ In order to use this Agent you need to use the [Absolute Series Scanner from Zer
 
 Now you are done. At first Plex will scan for all the files, when this is done the agent will attempt to find the metadata associated with the videos.
 
+## Troubleshooting
+If you are running in to a problem, feel free to let me know so I can attempt to help you. However make sure to send the log files otherwise I can't help.
+
+[How do I download the Log files?](https://support.plex.tv/articles/200250417-plex-media-server-log-files/)
+
+### What is to blame?
+If videos are in the wrong season, videos are seen as copies, videos do not show up or videos are in the wrong channel this is an issue with your scanner. Contacting me is not useful because I can not help.
+
+If a video (or TV Show) has incorrect metadata (Title, Description, Thumbnail, Rating etc.) this is an issue with the Agent. Feel free to contact me.
+
+
 ## Thanks to...
 
 **[ZeroQI](https://github.com/ZeroQI)** - ZeroQI created the original Youtube Agent, the Absolute Series Scanner which this agent also uses and he has a bunch of helpful posts on the Plex forums.
