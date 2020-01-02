@@ -4,7 +4,7 @@ After about a year of using [ZeroQI's Youtube Agent](https://github.com/ZeroQI/Y
 This resulted in me looking around at different solutions, however I could not find anything that would work for me. 
 
 ## What does this agent do differently?  
-Instead of fetching the data from the Youtube API, we use the data that [Youtube-DL](https://github.com/ytdl-org/youtube-dl) stores when downloading a video. Making sure we have the metadata forever even if a video gets deleted.
+Instead of fetching the data from the Youtube API, we use the data that [Youtube-DL](https://github.com/ytdl-org/youtube-dl) stores when downloading a video. Making sure we have the thumbnail and metadata forever even if a video gets deleted.
 
 ## Youtube-DL integration
 In order to have this agent work correctly, videos have to be downloaded with [Youtube-DL](https://github.com/ytdl-org/youtube-dl). Youtube-DL has to be set to store the metadata and thumbnail of videos. Here is an example of a configuration
