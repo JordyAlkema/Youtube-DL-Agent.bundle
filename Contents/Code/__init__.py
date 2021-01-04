@@ -65,15 +65,18 @@ class YoutubeDLAgent(Agent.TV_Shows):
                     Log("Processing: '{}' in {}".format(filepath, metadata.title))
 
                     # Check if there is a thumbnail for this episode
-                    if os.path.isfile(filepath + ".jpg"):
-
-                        # we found an image, attempt to create an Proxy Media object to store it
-                        try:
-                            picture = Core.storage.load(filepath + ".jpg")
-                            picture_hash = hashlib.md5(picture).hexdigest()
-                            episode.thumbs[picture_hash] = Proxy.Media(picture, sort_order=1)
-                        except:
-                            Log("Could not access file '{}'".format(filepath + ".jpg"))
+                    for extension in [".jpg", ".webp"]:
+                        maybeFile = filepath + extension
+                        if os.path.isfile(maybeFile):
+                            Log("Found thumbnail {}".format(maybeFile))
+                            # we found an image, attempt to create an Proxy Media object to store it
+                            try:
+                                picture = Core.storage.load(maybeFile)
+                                picture_hash = hashlib.md5(picture).hexdigest()
+                                episode.thumbs[picture_hash] = Proxy.Media(picture, sort_order=1)
+                                break
+                            except:
+                                Log("Could not access file '{}'".format(maybeFile))
 
                     # Attempt to open the .info.json file Youtube-DL stores.
                     try:
