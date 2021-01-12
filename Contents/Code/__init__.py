@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os, hashlib, re, inspect, json
 from io import open
 import json
@@ -39,7 +42,7 @@ class YoutubeDLAgent(Agent.TV_Shows):
                 filepath = filepath.strip()
 
                 try:
-                    with open(filepath + ".info.json") as json_file:
+                    with open(filepath + ".info.json", encoding="utf-8") as json_file:
                         data = json.load(json_file)
 
                         metadata.title = data['uploader']
@@ -80,7 +83,7 @@ class YoutubeDLAgent(Agent.TV_Shows):
 
                     # Attempt to open the .info.json file Youtube-DL stores.
                     try:
-                        with open(filepath + ".info.json") as json_file:
+                        with open(filepath + ".info.json", encoding="utf-8") as json_file:
                             data = json.load(json_file)
 
                             episode.title = data['fulltitle']
