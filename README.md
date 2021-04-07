@@ -10,7 +10,7 @@ Instead of fetching the data from the Youtube API, we use the data that [Youtube
 In order to have this agent work correctly, videos have to be downloaded with [Youtube-DL](https://github.com/ytdl-org/youtube-dl). Youtube-DL has to be set to store the metadata and thumbnail of videos. Here is an example of a configuration
 
 ```
-youtube-dl {URL} --add-metadata --write-info-json--write-thumbnail -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'-o "/youtube/%(uploader)s [%(uploader_id)s]/%(title)s[%(id)s].%(ext)s"
+youtube-dl {URL} --add-metadata --write-info-json --write-thumbnail -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' -o "/youtube/%(uploader)s [%(uploader_id)s]/%(title)s[%(id)s].%(ext)s"
 ```
 
 This Youtube-DL configuration is also compatible with the ZeroQI Youtube Agent.
