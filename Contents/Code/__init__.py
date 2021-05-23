@@ -68,7 +68,7 @@ class YoutubeDLAgent(Agent.TV_Shows):
                     Log("Processing: '{}' in {}".format(filepath, metadata.title))
 
                     # Check if there is a thumbnail for this episode
-                    for extension in [".jpg", ".webp"]:
+                    for extension in [".jpg", ".jpeg", ".webp", ".png", ".tiff", ".gif", ".jp2"]:
                         maybeFile = filepath + extension
                         if os.path.isfile(maybeFile):
                             Log("Found thumbnail {}".format(maybeFile))
