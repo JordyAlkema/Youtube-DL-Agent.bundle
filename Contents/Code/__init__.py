@@ -47,7 +47,8 @@ class YoutubeDLAgent(Agent.TV_Shows):
 
                         metadata.title = data['uploader']
                         metadata.studio = data['uploader']
-                        metadata.summary = data['playlist_title']
+                        if 'playlist_title' in data:
+                            metadata.summary = data['playlist_title']
 
                         break
                 except IOError:
@@ -89,13 +90,13 @@ class YoutubeDLAgent(Agent.TV_Shows):
                             episode.title = data['fulltitle']
                             episode.summary = data["description"]
 
-                            if data['playlist_index']:
+                            if 'playlist_index' in data:
                                 episode.absolute_index = data['playlist_index']
 
-                            if data['upload_date']:
+                            if 'upload_date' in data:
                                 episode.originally_available_at = Datetime.ParseDate(data['upload_date']).date()
 
-                            if data['average_rating']:
+                            if 'average_rating' in data:
                                 episode.rating = (data['average_rating'] * 2)
 
                             Log("Processed successfully! This episode was named '{}'".format(data['fulltitle']))
