@@ -1,3 +1,7 @@
+# Fork notice
+
+This fork enables local media assets, such as `poster.jpg` for channel posters, and subtitles.
+
 # Youtube-DL Agent
 After about a year of using [ZeroQI's Youtube Agent](https://github.com/ZeroQI/YouTube-Agent.bundle) I noticed a problem. If a youtube video gets deleted, it is no longer possible to get the metadata. Which makes sense, however the entire goal of having Youtube videos on your Plex Media Server is to make sure they never get deleted. 
 
